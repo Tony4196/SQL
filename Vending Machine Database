@@ -1,0 +1,25 @@
+CREATE TABLE soda (id INTEGER PRIMARY KEY, brand TEXT, name TEXT, oz REAL, price INTEGER);
+INSERT INTO soda VALUES (1, "Pepsi", "Dr. Pepper", 12, 3.69);
+INSERT INTO soda VALUES (2, "Coke", "Sprite", 12, 3.70);
+INSERT INTO soda VALUES (3, "Pepsi", "Pepsi", 16, 5.60);
+INSERT INTO soda VALUES (4, "Coke", "Coca-Cola", 22, 7.80);
+INSERT INTO soda VALUES (5, "Pepsi", "MountainDew", 16, 2.29);
+INSERT INTO soda VALUES (6, "Coke", "FantaGrape", 12, 2.65);
+INSERT INTO soda VALUES (7, "Pepsi", "SunkistOrange", 18, 8.62);
+INSERT INTO soda VALUES (8, "Pepsi", "Baja Blast", 12, 4.60);
+INSERT INTO soda VALUES (9, "Pepsi", "GingerAle", 12, 5.62);
+INSERT INTO soda VALUES (10, "Coke", "Monster", 36, 10.62);
+INSERT INTO soda VALUES (11, "Coke", "Cherry Coke", 32, 11.00);
+INSERT INTO soda VALUES (12, "Pepsi", "SierraMist", 16, 3.52);
+INSERT INTO soda VALUES (13, "Coke", "Vanilla Coke", 18, 5.00);
+INSERT INTO soda VALUES (14, "Coke", "CherVanilCoke", 16, 3.52);
+INSERT INTO soda VALUES (15, "Pepsi", "Cherry Pepsi", 12, 4.52);
+
+--display the database ordered by price. 
+SELECT * FROM soda
+ORDER BY price desc;
+
+
+---What is the average price of soda?
+SELECT * FROM soda order by price;
+SELECT AVG(price) from soda group by price;

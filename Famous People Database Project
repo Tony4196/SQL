@@ -1,0 +1,66 @@
+CREATE TABLE famous_people (id INTEGER PRIMARY KEY AUTOINCREMENT, name TEXT, age integer);
+
+INSERT INTO famous_people VALUES (1,"Dwayne Johnson", 50);
+INSERT INTO famous_people VALUES (2, "Zoe Saldna", 44);
+INSERT INTO famous_people VALUES (3, "Robert Downey Jr.", 57);
+INSERT INTO famous_people VALUES (4, "Taylor Swift", 32);
+INSERT INTO famous_people VALUES (5, "Selena Gomez", 30);
+INSERT INTO famous_people VALUES (6, "Tom Hanks", 66);
+INSERT INTO famous_people VALUES (7, "Johnny Depp", 59);
+INSERT INTO famous_people VALUES (8, "Beyonce", 40);
+INSERT INTO famous_people VALUES (9, "Morgan Freeman", 85);
+INSERT INTO famous_people VALUES (10, "Lady Gaga", 36);
+INSERT INTO famous_people VALUES (11, "Karen Gillan", 34);
+INSERT INTO famous_people VALUES (12, "Jim Carrey", 60);
+INSERT INTO famous_people VALUES (13, "Betty White", 99);
+INSERT INTO famous_people VALUES (14, "Danny Devito", 77);
+INSERT INTO famous_people VALUES (15, "Hugh Jackman", 53);
+INSERT INTO famous_people VALUES (16, "Patrick Stewart", 82);
+INSERT INTO famous_people VALUES (17, "Seth MacFarlane", 48);
+INSERT INTO famous_people VALUES (18, "Sir Ian McKellen", 83);
+INSERT INTO famous_people VALUES (19, "Dolly Parton", 76);
+INSERT INTO famous_people VALUES (20, "Harrison Ford", 80);
+INSERT INTO famous_people VALUES (21, "Scarlett Johansson", 37);
+INSERT INTO famous_people VALUES (22, "Zendaya", 25);
+INSERT INTO famous_people VALUES (23, "Hailee Steinfeld", 25);
+INSERT INTO famous_people VALUES (24, "Ryan Rynolds", 45);
+INSERT INTO famous_people VALUES (25, "Blake Lively", 34);
+
+
+CREATE TABLE movies (id INTEGER PRIMARY KEY AUTOINCREMENT, title TEXT, release_date TEXT, budget INTEGER, box_office INTEGER, star_id INTEGER);
+
+INSERT INTO movies VALUES (1, "Green Lantern", "05-15-2011", "200,000,000", "219,000,000", 24);
+INSERT INTO movies VALUES (2, "Dead Pool", "02-12-2016", "58,000,000", "783,100,000", 24);
+INSERT INTO movies VALUES (3, "Bumble Bee", "12-21-2018", "135,000,000", "468,000,000", 23);
+INSERT INTO movies VALUES (4, "The Greatest Showman", "12-20-2017", "84,000,000", "434,900,000", 15);
+INSERT INTO movies VALUES (5, "Spider-Man Homecoming", "07-07-2017", "175,000,000", "880,200,000", 22);
+INSERT INTO movies VALUES (6, "Black Widow", "06-29-2021", "200,000,000", "379,800,000", 21);
+INSERT INTO movies VALUES (7, "SING", "12-21-2016", "75,000,000", "634,200,000", 21);
+INSERT INTO movies VALUES (8, "The Call of the Wild", "02-13-2020", "150,000,000", "111,000,000", 20);
+ INSERT INTO movies VALUES (9, "Gnomeo & Juliet", "02-11-2011", "36,000,000", "193,900,000", 16);
+ INSERT INTO movies VALUES (10, "X-Men", "07-14-2000", "75,000,000", "296,300,000", 16);
+ INSERT INTO movies VALUES (11, "Hobbit", "12-06-2012", "315,000,000", "1,017,000,000", 18);
+ INSERT INTO movies VALUES (12, "Flushed Away", "11-02-2006", "149,000,000", "178,000,000", 15);
+ INSERT INTO movies VALUES (13, "Ted", "06-29-2012", "65,000,000", "549,400,000", 17);
+ INSERT INTO movies VALUES (14, "A Million Ways to Die in the West", "05-15-2014", "40,000,000", "80,200,000", 17);
+ INSERT INTO movies VALUES (15, "LOGAN", "03-03-2017", "127,000,000", "619,200,000", 15);
+ INSERT INTO movies VALUES (16, "Disney's Hercules", "06-13-1997", "85,000,000", "252,700,000", 14);
+ INSERT INTO movies VALUES (17, "Jumanji The Next Level", "12-13-2019", "132,000,000", "800,100,000", 1);
+ INSERT INTO movies VALUES (18, "The Propsal", "06-19-2009", "40,000,000", "317,400,000", 13);
+INSERT INTO movies VALUES (19, "The Grinch", "11-08-2000", "123,000,000", "345,100,000", 12);
+INSERT INTO movies VALUES (20, "A Star is Born", "10-05-2018", "36,000,000", "436,200,000", 10);
+INSERT INTO movies VALUES (21, "Bruce Almighty", "05-23-2003", "81,000,000", "484,600,000", 12);
+INSERT INTO movies VALUES (22, "Avengers: Infinity War", "04-27-2018", "316,000,000", "2,048,000,000", 3);
+INSERT INTO movies VALUES (23, "Austin Powers: Gold Member", "07-22-2002", "63,000,000", "296,700,000", 8);
+INSERT INTO movies VALUES (24, "Curse of the Black Pearl", "06-28-2003", "140,000,000", "654,300,000", 7);
+INSERT INTO movies VALUES (25, "The Polar Express", "11-10-2004", "150,000,000", "314,000,000", 6);
+INSERT INTO movies VALUES (26, "Hotel Transylvania", "09-28-2012", "85,000,000", "354,400,000", 5);
+INSERT INTO movies VALUES (27, "The Lorax", "03-02-2012", "70,000,000", "349,200,000", 14);
+INSERT INTO movies VALUES (28, "Avatar", "12-08-2009", "237,000,000", "2,847,000,000", 2);
+
+
+
+SELECT famous_people.name as Star, movies.title as Movie, movies.box_office as Profit
+FROM famous_people
+INNER JOIN movies
+ON famous_people.id = movies.star_id;
